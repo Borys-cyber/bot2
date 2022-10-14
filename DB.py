@@ -42,7 +42,7 @@ def add_user(user: dict):
 def get_user(id_telegram: int):
     connect = sqlite3.connect(DATABASE_NAME)
     cursor = connect.cursor()
-    get = f'SELECT * FROM users WHERE id_telegram="{id_telegram}"'
+    get = f'SELECT * FROM USERSiNEWS WHERE users_id="{id_telegram}"'
     result = cursor.execute(get)
     data = result.fetchall()
     return data
@@ -51,7 +51,7 @@ def get_user(id_telegram: int):
 def get_users():
     connect = sqlite3.connect(DATABASE_NAME)
     cursor = connect.cursor()
-    get = f'SELECT * FROM users'
+    get = f'SELECT * FROM USERSiNEWS'
     result = cursor.execute(get)
     data = result.fetchall()
     return data
